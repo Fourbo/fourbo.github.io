@@ -1,0 +1,22 @@
+.card:hover .card-img-overlay {
+	opacity: 1 !important;
+	transition: opacity 0.2s ease-in-out;
+}
+
+.blue-text .nav-link {
+	color: #87CEEB !important;
+}
+
+.pink-text .nav-link:hover {
+	color: #F08AA7 !important;
+}
+
+.bolder-font .nav-link {
+	font-weight: 500 !important;
+}
+
+.logo-border {
+	border: 3px solid #FFD700;
+	border-radius: 50%;
+	padding: 2px;
+}
