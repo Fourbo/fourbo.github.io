@@ -10,7 +10,7 @@ function preload() {
 // preload() runs once, it may make you wait
 //  img = loadImage('cat.jpg');  // cat.jpg needs to be next to this .js file
 // you can link to an image on your github account
-  img = loadImage('https://png.pngtree.com/png-clipart/20240610/original/pngtree-yellow-icecream-scoop-isolated-at-transparent-background-png-image_15298656.png');
+  img = loadImage('fourbo.github.io/images/mango_ice_cream.png');
   img2 = loadImage('https://png.pngtree.com/png-clipart/20231016/original/pngtree-chocolate-brownie-png-png-image_13321546.png');
   img3 = loadImage('https://images.vexels.com/media/users/3/260761/isolated/lists/216b790338cec3e817f23122cbb3636c-strawberry-flat-simple-fruit.png');
 }
