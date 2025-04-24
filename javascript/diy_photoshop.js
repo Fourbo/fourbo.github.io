@@ -1,6 +1,7 @@
 var img;
 var img2;
 var img3;
+var img4;
 var initials ='jm'; // your initials
 var choice = '1'; // starting choice, so it is not empty
 var screenbg = 250; // off white background
@@ -11,8 +12,9 @@ function preload() {
 //  img = loadImage('cat.jpg');  // cat.jpg needs to be next to this .js file
 // you can link to an image on your github account
   img = loadImage('https://fourbo.github.io/images/mango_ice_cream.png');
-  img2 = loadImage('https://png.pngtree.com/png-clipart/20231016/original/pngtree-chocolate-brownie-png-png-image_13321546.png');
-  img3 = loadImage('https://images.vexels.com/media/users/3/260761/isolated/lists/216b790338cec3e817f23122cbb3636c-strawberry-flat-simple-fruit.png');
+  img2 = loadImage('https://fourbo.github.io/images/brownie.png');
+  img3 = loadImage('https://fourbo.github.io/images/strawberry.png');
+  img4 = loadImage('https://fourbo.github.io/images/macaroon_background.png')
 }
 
 function setup() {
