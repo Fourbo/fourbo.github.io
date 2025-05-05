@@ -52,5 +52,21 @@
 			</div>
 			
 		</div>
+		<script>
+  function adjustModelContainerHeight() {
+    const navbar = document.querySelector('.navbar');
+    const container = document.querySelector('.model-container');
+
+    if (navbar && container) {
+      const navHeight = navbar.offsetHeight;
+      const windowHeight = window.innerHeight;
+      container.style.height = `${windowHeight - navHeight}px`;
+    }
+  }
+
+  window.addEventListener('load', adjustModelContainerHeight);
+  window.addEventListener('resize', adjustModelContainerHeight);
+</script>
+
 	</body>
 </html>
