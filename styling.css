@@ -117,3 +117,13 @@ body {
 .no-arrow::after {
 	display: none !important;
 }
+
+.model-container {
+  width: 60vw;
+  height: 60vh;
+  max-height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
