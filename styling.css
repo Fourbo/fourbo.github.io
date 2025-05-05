@@ -127,6 +127,6 @@ body {
 
 .model-viewer-square {
   width: 100%;
-  max-width: 60vmin;
-  height: 60vmin;
+  max-width: 90vmin;
+  height: 90vmin;
 }
