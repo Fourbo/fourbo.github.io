@@ -12,14 +12,14 @@
 	<body>
 		<div class="container-fluid">
 		
-			<!-- Header --!>
+			<!-- Header -->
 			<nav class="navbar navbar-expand-sm gradient-navbar d-flex justify-content-between">
 				<a class="navbar-brand" href="index.html">
 					<img src="images/kirbo.png" width="70" height="70" class="rounded-circle logo-border">
 				</a>
 				<h3><a class="nav-link" href="index.html">Noah Fourby</a></h3>
 				<ul class="navbar-nav ms-auto fs-5 blue-text pink-text bolder-font">
-					<li class="navbar-item"><a class="nav-link" href="index.html">Home</a></li>
+					<li class="navbar-item"><a class="nav-link active-page" href="index.html">Home</a></li>
 					<li class="navbar-item"><a class="nav-link" href="glitch-art.html">Glitch</a></li>
 					<li class="navbar-item"><a class="nav-link" href="meme-mashup.html">Meme Mashup</a></li>
 					<li class="navbar-item"><a class="nav-link" href="minecraft-art.html">Minecraft Art</a></li>
@@ -37,19 +37,41 @@
 				</ul>
 			</nav>
 			
-			<!-- Body --!>
-			<br><h1 class="text-center">Welcome to Noah's Portfolio!</h1><br>
-			<div class="row">
-				<div class="col text-center">
-					<img src="images/cover-photo.jpg" class="rounded-circle shadow-border" width="500" height="500" alt="Cover Photo">
-				</div>
-				<div class="col">
-					<p class="fs-5">Welcome! My name is Noah Fourby, and I am currently an Open University student at San Jose State Unversity, and 
-					hoping to join the Masters in Design, Specialty in Animation this Fall. I am originally from Dublin, CA, and have been living in San Jose for the 
-					past few years for school. This website is hand-coded in HTML, CSS, & Bootstrap to act as my personal online portfolio and respository to 
-					showcase my various artwork. As you navigate this site you will learn about different art projects I have made for my ART-74 class.</p>
+			<!-- Body -->
+			<div id="page-content" class="fade-in">
+				<br><h1 class="text-center">Welcome to Noah's Portfolio!</h1><br>
+				<div class="row">
+					<div class="col text-center">
+						<img src="images/cover-photo.jpg" class="rounded-circle shadow-border" width="500" height="500" alt="Cover Photo">
+					</div>
+					<div class="col">
+						<p class="fs-5">Welcome! My name is Noah Fourby, and I am currently an Open University student at San Jose State Unversity, and 
+						hoping to join the Masters in Design, Specialty in Animation this Fall. I am originally from Dublin, CA, and have been living in San Jose for the 
+						past few years for school. This website is hand-coded in HTML, CSS, & Bootstrap to act as my personal online portfolio and respository to 
+						showcase my various artwork. As you navigate this site you will learn about different art projects I have made for my ART-74 class.</p>
+					</div>
 				</div>
 			</div>
 		</div>
+		
+		<!-- Fade in and out between pages -->
+		<script>
+			document.querySelectorAll('a[href]').forEach(link => {
+			const href = link.getAttribute('href');
+			if (!href.startsWith('#') && !link.classList.contains('no-fade')) {
+			link.addEventListener('click', function (e) {
+				const page = document.getElementById('page-content');
+				if (page) {
+					e.preventDefault();
+					page.classList.remove('fade-in');
+					page.classList.add('fade-out');
+					setTimeout(() => {
+						window.location = this.href;
+					}, 400);
+				}
+			});
+			}
+			});
+		</script>
 	</body>
 </html>

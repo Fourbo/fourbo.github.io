@@ -10,10 +10,10 @@
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 	</head>
 	<body>
-		<div class="container-fluid">
+		<div class="container-fluid text-center">
 
-			<!-- Header --!>
-			<nav class="navbar navbar-expand-sm gradient-navbar bg-light d-flex justify-content-between">
+			<!-- Header -->
+			<nav class="navbar navbar-expand-sm gradient-navbar d-flex justify-content-between">
 				<a class="navbar-brand" href="../index.html">
 					<img src="../images/kirbo.png" width="70" height="70" class="rounded-circle logo-border">
 				</a>
@@ -24,7 +24,7 @@
 					<li class="navbar-item"><a class="nav-link" href="../meme-mashup.html">Meme Mashup</a></li>
 					<li class="navbar-item"><a class="nav-link" href="../minecraft-art.html">Minecraft Art</a></li>
 					<li class="navbar-item"><a class="nav-link" href="../3d-printing.html">3D Printing</a></li>
-					<li class="navbar-item"><a class="nav-link" href="net-art.html">Net Art</a></li>
+					<li class="navbar-item"><a class="nav-link active-page" href="net-art.html">Net Art</a></li>
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle no-arrow" href="../javascript/javascript.html" role="button">Javascript</a>
 						<ul class="dropdown-menu dropdown-center">
@@ -33,14 +33,46 @@
 							<li><a class="dropdown-item" href="../javascript/interactive_game.html">Interactive Game</a></li>
 						</ul>
 					</li>
+					<li class="navbar-item"><a class="nav-link" href="../blender/blender.html">Blender</a></li>
 				</ul>
 			</nav>
 
 			<!-- Body --!>
-			<h2>You chose to play in an Orchestra!</h2>
-			<p class="fs-5">Featuring many string instruments along with other wind instruments, an orchestra often plays of a variety of rich compositions from different genres. This is what is most often thought of with classical music!</p>
-			<img src="https://necmusic.edu/wp-content/uploads/2024/04/NEC-Philharmonia.jpg" height="400" class="rounded-small">
-			<br><br><a href="choosing_a_band.html"><button type="button" class="btn btn-outline-primary btn-lg rounded-small">Choose a Different Band</button></a>
-		</div>
+			<div id="page-content" class="fade-in">
+				<br><h2>You chose to play in an Orchestra!</h2>
+				<div class="w-100 w-md-80 mx-auto">
+					<p class="fs-5">Featuring many string instruments along with other wind instruments, an orchestra often plays of a variety of rich compositions from different genres. This is what is most often thought of with classical music!</p>
+				</div>
+				
+				<div class="d-flex flex-wrap justify-content-center align-items-center gap-3">
+					<!-- Image -->
+					<img src="https://necmusic.edu/wp-content/uploads/2024/04/NEC-Philharmonia.jpg" width="711" height="400" class="rounded-small">
+					<!-- Video -->
+					<iframe width="711" height="400" src="https://www.youtube.com/embed/n3EiRynr1Us?si=IIwuogBVtW0R2XVL" 
+					title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+					referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="rounded-small"></iframe>
+				</div><br>
+				<a href="choosing_a_band.html"><button type="button" class="btn btn-outline-primary btn-lg rounded-small">Choose a Different Band</button></a>
+			</div>
+			
+		<!-- Fade in and out between pages -->
+		<script>
+			document.querySelectorAll('a[href]').forEach(link => {
+			const href = link.getAttribute('href');
+			if (!href.startsWith('#') && !link.classList.contains('no-fade')) {
+			link.addEventListener('click', function (e) {
+				const page = document.getElementById('page-content');
+				if (page) {
+					e.preventDefault();
+					page.classList.remove('fade-in');
+					page.classList.add('fade-out');
+					setTimeout(() => {
+						window.location = this.href;
+					}, 400);
+				}
+			});
+			}
+			});
+		</script>
 	</body>
 </html>

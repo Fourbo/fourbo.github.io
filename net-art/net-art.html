@@ -10,21 +10,21 @@
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 	</head>
 	<body>
-		<div class="container-fluid">
+		<div class="container-fluid text-center">
 
-			<!-- Header --!>
-			<nav class="navbar navbar-expand-sm gradient-navbar bg-light d-flex justify-content-between">
-				<a class="navbar-brand" href="index.html">
+			<!-- Header -->
+			<nav class="navbar navbar-expand-sm gradient-navbar d-flex justify-content-between">
+				<a class="navbar-brand" href="../index.html">
 					<img src="../images/kirbo.png" width="70" height="70" class="rounded-circle logo-border">
 				</a>
-				<h3><a class="nav-link" href="index.html">Noah Fourby</a></h3>
+				<h3><a class="nav-link" href="../index.html">Noah Fourby</a></h3>
 				<ul class="navbar-nav ms-auto fs-5 blue-text pink-text bolder-font">
 					<li class="navbar-item"><a class="nav-link" href="../index.html">Home</a></li>
 					<li class="navbar-item"><a class="nav-link" href="../glitch-art.html">Glitch</a></li>
 					<li class="navbar-item"><a class="nav-link" href="../meme-mashup.html">Meme Mashup</a></li>
 					<li class="navbar-item"><a class="nav-link" href="../minecraft-art.html">Minecraft Art</a></li>
 					<li class="navbar-item"><a class="nav-link" href="../3d-printing.html">3D Printing</a></li>
-					<li class="navbar-item"><a class="nav-link" href="net-art.html">Net Art</a></li>
+					<li class="navbar-item"><a class="nav-link active-page" href="net-art.html">Net Art</a></li>
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle no-arrow" href="../javascript/javascript.html" role="button">Javascript</a>
 						<ul class="dropdown-menu dropdown-center">
@@ -33,15 +33,38 @@
 							<li><a class="dropdown-item" href="../javascript/interactive_game.html">Interactive Game</a></li>
 						</ul>
 					</li>
+					<li class="navbar-item"><a class="nav-link" href="../blender/blender.html">Blender</a></li>
 				</ul>
 			</nav>
 			
 			<!-- Body --!>
-			<h2>Learn the Path of Musicianship!</h2>
-			<p class="fs-5">You'll get to pick an instrument you want to play and eventually choose a band to play for. Learning music is a lot of fun!</p>
-			<img src="https://www.sweetwater.com/sweetcare/media/2024/05/Instrument-Care-Basics-for-Beginners-featured-image.jpg" class="rounded-small" height="400"><br><br>
-			<a href="../index.html"><button type="button" class="btn btn-outline-primary btn-lg rounded-medium">I Don't Want to Learn An Instrument :( </button></a>
-			<a href="recorder.html"><button type="button" class="btn btn-outline-primary btn-lg rounded-medium">Continue</button></a>
+			<div id="page-content" class="fade-in">
+				<br><h1>Net Art Story</h1></br>
+				<h2>Learn the Path of Musicianship!</h2>
+				<p class="fs-5">You'll get to pick an instrument you want to play and eventually choose a band to play for. Learning music is a lot of fun!</p>
+				<img src="https://www.sweetwater.com/sweetcare/media/2024/05/Instrument-Care-Basics-for-Beginners-featured-image.jpg" class="rounded-small" height="400"><br><br>
+				<a href="recorder.html"><button type="button" class="btn btn-outline-primary btn-lg rounded-medium">Continue</button></a>
+			</div>
 		</div>
+	
+		<!-- Fade in and out between pages -->
+		<script>
+			document.querySelectorAll('a[href]').forEach(link => {
+			const href = link.getAttribute('href');
+			if (!href.startsWith('#') && !link.classList.contains('no-fade')) {
+			link.addEventListener('click', function (e) {
+				const page = document.getElementById('page-content');
+				if (page) {
+					e.preventDefault();
+					page.classList.remove('fade-in');
+					page.classList.add('fade-out');
+					setTimeout(() => {
+						window.location = this.href;
+					}, 400);
+				}
+			});
+			}
+			});
+		</script>
 	</body>
 </html>

@@ -11,11 +11,11 @@
 	</head>
 	
 	<body>
-		<div class="container-fluid">
+		<div class="container-fluid text-center">
 
-			<!-- Header --!>
-			<nav class="navbar navbar-expand-sm gradient-navbar bg-light d-flex justify-content-between">
-				<a class="navbar-brand" href="index.html">
+			<!-- Header -->
+			<nav class="navbar navbar-expand-sm gradient-navbar d-flex justify-content-between">
+				<a class="navbar-brand" href="../index.html">
 					<img src="../images/kirbo.png" width="70" height="70" class="rounded-circle logo-border">
 				</a>
 				<h3><a class="nav-link" href="../index.html">Noah Fourby</a></h3>
@@ -25,7 +25,7 @@
 					<li class="navbar-item"><a class="nav-link" href="../meme-mashup.html">Meme Mashup</a></li>
 					<li class="navbar-item"><a class="nav-link" href="../minecraft-art.html">Minecraft Art</a></li>
 					<li class="navbar-item"><a class="nav-link" href="../3d-printing.html">3D Printing</a></li>
-					<li class="navbar-item"><a class="nav-link" href="net-art.html">Net Art</a></li>
+					<li class="navbar-item"><a class="nav-link active-page" href="net-art.html">Net Art</a></li>
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle no-arrow" href="../javascript/javascript.html" role="button">Javascript</a>
 						<ul class="dropdown-menu dropdown-center">
@@ -34,23 +34,49 @@
 							<li><a class="dropdown-item" href="../javascript/interactive_game.html">Interactive Game</a></li>
 						</ul>
 					</li>
+					<li class="navbar-item"><a class="nav-link" href="../blender/blender.html">Blender</a></li>
 				</ul>
 			</nav>
 
-			<!-- Body --!>
-			<h2>You chose the Clarinet!</h2>
-			<p class="fs-5">Often described as having a wooden, this is a lightweight yet verstaile instrument that adds a crisp sound to many ensembles.</p>
-			<div class="row">
-				<div class="col">
-				<img src="https://singersroom.com/wp-content/uploads/2023/09/Trombone-Lessons.png" height="400" class="rounded-medium"><br>
+			<!-- Body -->
+			<div id="page-content" class="fade-in">
+				<br><h2>You chose the Clarinet!</h2>
+				<div class="w-100 w-md-80 mx-auto">
+					<p class="fs-5">Often described as having a wooden, this is a lightweight yet verstaile instrument that adds a crisp sound to many ensembles.</p>
 				</div>
-				<div class="col">
-				<iframe class="rounded-medium" width="711" height="400" src="https://www.youtube.com/embed/6JD_7Dc6fxQ?si=NVmGdG0ZdCpa_ifd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-				</div>
-			</div><br>
+			
+				<div class="d-flex flex-wrap justify-content-center align-items-center gap-3">
+					<!-- Image -->
+					<img src="https://live.staticflickr.com/7854/39911791833_990af888b3_o.jpg" width="711" height="400" class="rounded-medium">
+					<!-- Video -->
+					<iframe class="rounded-medium" width="711" height="400" src="https://www.youtube.com/embed/6JD_7Dc6fxQ?si=NVmGdG0ZdCpa_ifd" 
+					title="YouTube video player" frameborder="0" 
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+					referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+				</div><br>
 			<a href="choosing_an_instrument.html"><button type="button" class="btn btn-outline-primary btn-lg rounded-medium">Choose a Different Instrument</button></a>
 			<a href="practice.html"><button type="button" class="btn btn-outline-primary btn-lg rounded-medium">Continue</button></a>
 
 		</div>
+		
+		<!-- Fade in and out between pages -->
+		<script>
+			document.querySelectorAll('a[href]').forEach(link => {
+			const href = link.getAttribute('href');
+			if (!href.startsWith('#') && !link.classList.contains('no-fade')) {
+			link.addEventListener('click', function (e) {
+				const page = document.getElementById('page-content');
+				if (page) {
+					e.preventDefault();
+					page.classList.remove('fade-in');
+					page.classList.add('fade-out');
+					setTimeout(() => {
+						window.location = this.href;
+					}, 400);
+				}
+			});
+			}
+			});
+		</script>
 	</body>
 </html>
