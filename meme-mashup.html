@@ -57,24 +57,7 @@
 			</div>
 		</div>
 		
-		<!-- Fade in and out between pages -->
-		<script>
-			document.querySelectorAll('a[href]').forEach(link => {
-			const href = link.getAttribute('href');
-			if (!href.startsWith('#') && !link.classList.contains('no-fade')) {
-			link.addEventListener('click', function (e) {
-				const page = document.getElementById('page-content');
-				if (page) {
-					e.preventDefault();
-					page.classList.remove('fade-in');
-					page.classList.add('fade-out');
-					setTimeout(() => {
-						window.location = this.href;
-					}, 400);
-				}
-			});
-			}
-			});
-		</script>
+		<!-- Page Transition -->
+		<script src="../scripts/navigation.js"></script>
 	</body>
 </html>
