@@ -38,7 +38,7 @@
 				</ul>
 			</nav>
 
-			<!-- Body --!>
+			<!-- Body -->
 			<div id="page-content" class="fade-in">
 				<br><h2>You chose the Trombone!</h2>
 				<div class="w-100 w-md-80 mx-auto">
@@ -56,24 +56,7 @@
 			<a href="practice.html"><button type="button" class="btn btn-outline-primary btn-lg rounded-small">Continue</button></a>
 		</div>
 
-		<!-- Fade in and out between pages -->
-		<script>
-			document.querySelectorAll('a[href]').forEach(link => {
-			const href = link.getAttribute('href');
-			if (!href.startsWith('#') && !link.classList.contains('no-fade')) {
-			link.addEventListener('click', function (e) {
-				const page = document.getElementById('page-content');
-				if (page) {
-					e.preventDefault();
-					page.classList.remove('fade-in');
-					page.classList.add('fade-out');
-					setTimeout(() => {
-						window.location = this.href;
-					}, 400);
-				}
-			});
-			}
-			});
-		</script>
+		<!-- Page Transition -->
+		<script src="../navigation.js"></script>
 	</body>
 </html>

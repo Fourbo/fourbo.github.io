@@ -160,3 +160,22 @@ body {
 .hover-shrink:hover {
 	transform: scale(0.95);
 }
+
+/* Wrapper that centers and contains the scaled iframe */
+.iframe-wrapper {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+/* Base iframe style */
+.iframe-wrapper iframe {
+  width: 1000px;
+  height: 1000px;
+  border: none;
+  transform: scale(calc(min(85vw, 85vh) / 1000));
+  transform-origin: top center;
+  pointer-events: auto;
+}
+

@@ -40,7 +40,9 @@
 			<!-- Body -->
 			<div id="page-content" class="fade-in">
 				<br><h1>Self Portrait</h1>
-				<p class="fs-5"></p>
+				<p class="fs-5">For this project, we had to make shapes using JavaScript to try and create a self portrait of ourselves. 
+				This project showcases an example of how coding can be used to create art with basic shapes, and the flexibility one has 
+				over the size, placement, and layering of included elements.</p>
 				<div class="d-flex justify-content-center align-items-center" style="width: 100%; padding: 0; margin: 0;">
 					<div style="position: relative; width: 90vmin; height: 90vmin; margin: auto;">
 						<iframe src="self_portrait_index.html" title="Self-Portrait Using JavaScript"
@@ -48,29 +50,13 @@
 						</iframe>
 					</div>
 				</div>
-
+				<h3>Portrait Code</h3>
+				<p class="fs-3">Below is the code for the used for making the shapes for the self portrait:</p>
 
 			</div>
 		</div>
 		
-		<!-- Fade in and out between pages -->
-		<script>
-			document.querySelectorAll('a[href]').forEach(link => {
-			const href = link.getAttribute('href');
-			if (!href.startsWith('#') && !link.classList.contains('no-fade')) {
-			link.addEventListener('click', function (e) {
-				const page = document.getElementById('page-content');
-				if (page) {
-					e.preventDefault();
-					page.classList.remove('fade-in');
-					page.classList.add('fade-out');
-					setTimeout(() => {
-						window.location = this.href;
-					}, 400);
-				}
-			});
-			}
-			});
-		</script>
+		<!-- Page Transition -->
+		<script src="navigation.js"></script>
 	</body>
 </html>

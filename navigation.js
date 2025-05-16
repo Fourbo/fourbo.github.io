@@ -16,10 +16,27 @@ document.querySelectorAll('a[href]').forEach(link => {
 	}
 });
 
-// Reset fade when returning to page
+// Trigger fade-in on normal first load
+window.addEventListener('DOMContentLoaded', function() {
+	const page = document.getElementById('page-content');
+	if (page && !page.classList.contains('fade-in')) {
+		page.classList.add('fade-in');
+	}
+});
+
+// Re-trigger fade-in when navigating back/forward (from bfcache)
 window.addEventListener('pageshow', function(event) {
 	const page = document.getElementById('page-content');
 	if (page) {
+		// Temporarily remove transition and set opacity to 0
+		page.style.transition = 'none';
+		page.style.opacity = 0;
+
+		// Force reflow so the style is applied before fade-in
+		void page.offsetWidth;
+
+		// Restore transition and fade-in
+		page.style.transition = 'opacity 0.4s ease-in-out';
 		page.classList.remove('fade-out');
 		page.classList.add('fade-in');
 	}
