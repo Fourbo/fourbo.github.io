@@ -164,6 +164,7 @@ body {
 /* Wrapper that centers and contains the scaled iframe */
 .iframe-wrapper {
   width: 100%;
+  height: 600px
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -179,3 +180,17 @@ body {
   pointer-events: auto;
 }
 
+.code-block {
+  max-width: 800px;      /* limits width for readability */
+  margin: 0 auto;        /* centers the block */
+  text-align: left;      /* aligns the text to the left */
+  overflow-x: auto;      /* enables horizontal scrolling if needed */
+  white-space: pre-wrap; /* preserves formatting but wraps long lines */
+}
+
+
+.text-width-limit {
+  max-width: 80%;
+  margin: 0 auto; /* center horizontally */
+  line-height: 1.6;
+}

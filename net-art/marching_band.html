@@ -10,7 +10,7 @@
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 	</head>
 	<body>
-		<div class="container-fluid">
+		<div class="container-fluid text-center">
 
 			<!-- Header --!>
 			<nav class="navbar navbar-expand-sm gradient-navbar bg-light d-flex justify-content-between">
@@ -37,10 +37,23 @@
 			</nav>
 
 			<!-- Body --!>
-			<h2>You chose to play in a marching band!</h1>
-			<p class="fs-5">A marching band often plays at sports games and parades, playing a variety of fun and peppy tunes for others.</p>
-			<img src="https://washburn.edu/_redesign2023/_files/images/interior/cas/music/RS2463_2019HomecomingDSC_7012_header.jpg" height="400" class="rounded-small">
-			<br><br><a href="choosing_a_band.html"><button type="button" class="btn btn-outline-primary btn-lg rounded-small">Choose a Different Band</button></a>
+			<div id="page-content" class="fade-in">
+				<br><h2>You chose to play in a marching band!</h2>
+				<div class="w-100 w-md-80 mx-auto">
+					<p class="fs-5 text-width-limit">A marching band often plays at sports games and parades, playing a variety of fun and 
+					peppy tunes for others.</p><br>
+				</div>
+				
+				<div class="d-flex flex-wrap justify-content-center align-items-center gap-3">
+					<!-- Image -->
+					<img src="https://npr.brightspotcdn.com/dims4/default/787446c/2147483647/strip/true/crop/1000x675+0+0/resize/880x594!/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Fdb%2Ff6%2F2290f883495a85958441fbbc8d82%2Fgrambling-state-marching-band.jpg" width="711" height="400" class="rounded-small">
+					<!-- Video -->
+					<iframe width="711" height="400" src="https://www.youtube.com/embed/KTfOlw_WMj8?si=0hS3D2MkvqKPrwoe" 
+					title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+					referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="rounded-small"></iframe>
+				</div><br>
+				<a href="choosing_a_band.html"><button type="button" class="btn btn-outline-primary btn-lg rounded-small">Choose a Different Band</button></a>
+			</div>
 		</div>
 
 		<!-- Page Transition -->
