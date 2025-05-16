@@ -111,7 +111,7 @@ function draw() {
 function levelOne() {
   text("Level 1", width/2, height-20);
   var distToBall = dist(ballx,bally,mouseX,mouseY);
-  if(distToBall < ballSize/2) {
+  if(distToBall &lt; ballSize/2) {
     ballx = random(width);
     bally = random(height);
     score = score + 1;
@@ -131,7 +131,7 @@ function levelOne() {
 function levelTwo() {
   text("Level 2", width/2, height-20);
   var distToBall = dist(ballx,bally,mouseX,mouseY);
-  if(distToBall < ballSize/2) {
+  if(distToBall &lt; ballSize/2) {
     ballx = random(width);
     bally = random(height);
     score = score + 1;
@@ -163,7 +163,7 @@ function levelThree() {
   ballx = constrain(ballx, ballSize/2, width - ballSize/2);
   bally = constrain(bally, ballSize/2, height - ballSize/2);
   
-  if(distToBall < ballSize/2) {
+  if(distToBall &lt; ballSize/2) {
     ballx = random(width);
     bally = random(height);
     score = score + 1;
@@ -196,7 +196,7 @@ function levelFour() {
   ballx = constrain(ballx, ballSize/2, width - ballSize/2);
   bally = constrain(bally, ballSize/2, height - ballSize/2);
   
-  if(distToBall < ballSize/2) {
+  if(distToBall &lt; ballSize/2) {
     ballx = random(width);
     bally = random(height);
     score = score + 1;
