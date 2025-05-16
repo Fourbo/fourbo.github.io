@@ -2,6 +2,7 @@ html {
 	overflow-y: scroll;
 }
 
+/* Scrollbar */
 ::-webkit-scrollbar {
 	width: 12px;
 }
@@ -17,6 +18,8 @@ html {
 	background-color: #666;
 }
 
+
+
 /*
 body {
 	margin: 0;
@@ -28,6 +31,9 @@ body {
 }
 */
 
+
+
+/* Navigation Bar Customization */
 .gradient-navbar {
 	position: relative;
 }
@@ -57,11 +63,6 @@ body {
 	100% { background-position: 100% 0%; }
 }
 
-.card:hover .card-img-overlay {
-	opacity: 1 !important;
-	transition: opacity 0.3s ease-in-out;
-}
-
 .blue-text .nav-link {
 	color: #5db8f5 !important;
 }
@@ -81,22 +82,9 @@ body {
 	padding: 2px;
 }
 
-.shadow-border {
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
 
-.rounded-small {
-	border-radius: 16px !important;
-}
 
-.rounded-medium {
-	border-radius: 16px !important;
-}
-
-.rounded-large {
-	border-radius: 40px !important;
-}
-
+/* Navigation Bar Dropdown Styling */
 .nav-item.dropdown:hover .dropdown-menu {
 	display: block !important;
 	margin-top:0;
@@ -119,6 +107,41 @@ body {
 	display: none !important;
 }
 
+
+
+/* Paragraph Text Styling*/
+.text-width-limit {
+  max-width: 90%;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+
+/* Image Styling */
+.shadow-border {
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.rounded-small {
+	border-radius: 16px !important;
+}
+
+.rounded-medium {
+	border-radius: 24px !important;
+}
+
+.rounded-large {
+	border-radius: 40px !important;
+}
+
+
+
+/* Card Hover Styling for Instrument Choices */
+.card:hover .card-img-overlay {
+	opacity: 1 !important;
+	transition: opacity 0.3s ease-in-out;
+}
+
 .model-container {
   display: flex;
   justify-content: center;
@@ -133,7 +156,50 @@ body {
 }
 
 
-/* Fade-in and fade-out animation classes */
+
+/* Image Hover Shrink Animation*/
+.hover-shrink {
+	transition: transform 0.3s ease;
+}
+
+.hover-shrink:hover {
+	transform: scale(0.95);
+}
+
+
+
+/* Javascript iframe Styling */
+.iframe-wrapper {
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.iframe-wrapper iframe {
+  width: 1000px;
+  height: 1000px;
+  border: none;
+  transform: scale(calc(min(85vw, 85vh) / 1000));
+  transform-origin: top center;
+  pointer-events: auto;
+}
+
+
+
+/* Javascript Code Layout Styling*/
+.code-block {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+  overflow-x: auto;
+  white-space: pre-wrap;
+}
+
+
+
+/* Page Transition Animation */
 .fade-in {
 	animation: fadeIn 0.3s ease-in forwards;
 }
@@ -142,7 +208,6 @@ body {
 	animation: fadeOut 0.3s ease-out forwards;
 }
 
-/* Keyframes */
 @keyframes fadeIn {
 	from { opacity: 0; }
 	to { opacity: 1; }
@@ -153,44 +218,3 @@ body {
 	to { opacity: 0; }
 }
 
-.hover-shrink {
-	transition: transform 0.3s ease;
-}
-
-.hover-shrink:hover {
-	transform: scale(0.95);
-}
-
-/* Wrapper that centers and contains the scaled iframe */
-.iframe-wrapper {
-  width: 100%;
-  height: 600px
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-}
-
-/* Base iframe style */
-.iframe-wrapper iframe {
-  width: 1000px;
-  height: 1000px;
-  border: none;
-  transform: scale(calc(min(85vw, 85vh) / 1000));
-  transform-origin: top center;
-  pointer-events: auto;
-}
-
-.code-block {
-  max-width: 800px;      /* limits width for readability */
-  margin: 0 auto;        /* centers the block */
-  text-align: left;      /* aligns the text to the left */
-  overflow-x: auto;      /* enables horizontal scrolling if needed */
-  white-space: pre-wrap; /* preserves formatting but wraps long lines */
-}
-
-
-.text-width-limit {
-  max-width: 90%;
-  margin: 0 auto; /* center horizontally */
-  line-height: 1.6;
-}
