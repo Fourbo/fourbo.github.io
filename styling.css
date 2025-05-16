@@ -190,7 +190,7 @@ body {
 
 
 .text-width-limit {
-  max-width: 80%;
+  max-width: 90%;
   margin: 0 auto; /* center horizontally */
   line-height: 1.6;
 }
