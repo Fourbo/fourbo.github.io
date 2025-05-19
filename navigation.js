@@ -41,3 +41,24 @@ window.addEventListener('pageshow', function(event) {
 		page.classList.add('fade-in');
 	}
 });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+	const lines = document.querySelectorAll(".story-line");
+	const continueLink = document.getElementById("continue-link");
+
+	let index = 0;
+
+	document.addEventListener("click", () => {
+		if (index < lines.length) {
+			lines[index].classList.remove("story-hidden");
+			lines[index].classList.add("story-visible");
+		} else if (index === lines.length) {
+			continueLink.classList.remove("story-hidden");
+			continueLink.classList.add("story-visible");
+		}
+		index++;
+	});
+});
+
+

@@ -8,48 +8,68 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+		<!-- For Formatting Scrollbar -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@6.2.3/dist/simplebar.min.css" />
+		<script src="https://cdn.jsdelivr.net/npm/simplebar@6.2.3/dist/simplebar.min.js"></script>
 	</head>
+	
 	<body>
-		<div class="container-fluid">
+		<div class="container-fluid text-center" data-simplebar>
 		
 			<!-- Header -->
-			<nav class="navbar navbar-expand-sm gradient-navbar d-flex justify-content-between">
-				<a class="navbar-brand" href="index.html">
-					<img src="images/kirbo.png" width="70" height="70" class="rounded-circle logo-border">
+			<nav class="navbar navbar-expand-lg gradient-navbar">
+			
+				<!-- Icon & Name -->
+				<a class="navbar-brand d-flex align-items-center ms-3 pt-0 pb-1" href="index.html">
+					<img src="images/kirbo.png" width="70" height="70" class="rounded-circle logo-border me-3">
+					<h3 class="mb-0">Noah Fourby</h3>
 				</a>
-				<h3><a class="nav-link" href="index.html">Noah Fourby</a></h3>
-				<ul class="navbar-nav ms-auto fs-5 blue-text pink-text bolder-font">
-					<li class="navbar-item"><a class="nav-link active-page" href="index.html">Home</a></li>
-					<li class="navbar-item"><a class="nav-link" href="glitch-art.html">Glitch</a></li>
-					<li class="navbar-item"><a class="nav-link" href="meme-mashup.html">Meme Mashup</a></li>
-					<li class="navbar-item"><a class="nav-link" href="minecraft-art.html">Minecraft Art</a></li>
-					<li class="navbar-item"><a class="nav-link" href="3d-printing.html">3D Printing</a></li>
-					<li class="navbar-item"><a class="nav-link" href="net-art/net-art.html">Net Art</a></li>
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle no-arrow" href="javascript/javascript.html" role="button">Javascript</a>
-						<ul class="dropdown-menu dropdown-center">
-							<li><a class="dropdown-item" href="javascript/self_portrait.html">Self Portrait</a></li>
-							<li><a class="dropdown-item" href="javascript/diy_photoshop.html">DIY Photoshop</a></li>
-							<li><a class="dropdown-item" href="javascript/interactive_game.html">Interactive Game</a></li>
-						</ul>
-					</li>
-					<li class="navbar-item"><a class="nav-link" href="blender/blender.html">Blender</a></li>
-				</ul>
+				
+				<!-- Menu Dropdown -->
+				<button class="navbar-toggler me-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu"
+				  aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+				  <span class="navbar-toggler-icon"></span>
+				</button>
+				
+				<!-- NavBar Items -->
+				<div class="collapse navbar-collapse" id="navbarMenu">
+					<ul class="navbar-nav ms-auto blue-text pink-text bolder-font">
+						<li><a class="nav-link active-page" href="index.html">Home</a></li>
+						<li><a class="nav-link" href="glitch-art.html">Glitch</a></li>
+						<li><a class="nav-link" href="meme-mashup.html">Meme Mashup</a></li>
+						<li><a class="nav-link" href="minecraft-art.html">Minecraft Art</a></li>
+						<li><a class="nav-link" href="3d-printing.html">3D Printing</a></li>
+						<li><a class="nav-link" href="net-art/net-art.html">Net Art</a></li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle no-arrow" href="#" id="jsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Javascript</a>
+							<ul class="dropdown-menu" aria-labelledby="jsDropdown">
+								<li><a class="dropdown-item fw-bold" href="javascript/javascript.html">All Projects</a></li>
+								<li><hr class="dropdown-divider"></li>
+								<li><a class="dropdown-item" href="javascript/self_portrait.html">Self Portrait</a></li>
+								<li><a class="dropdown-item" href="javascript/diy_photoshop.html">DIY Photoshop</a></li>
+								<li><a class="dropdown-item" href="javascript/interactive_game.html">Interactive Game</a></li>
+							</ul>
+						</li>
+						<li><a class="nav-link pe-md-3" href="interwoven/interwoven_home.html">Interwoven</a></li>
+					</ul>
+				</div>
 			</nav>
 			
 			<!-- Body -->
-			<div id="page-content" class="fade-in">
-				<br><h1 class="text-center">Welcome to Noah's Portfolio!</h1><br>
-				<div class="row">
-					<div class="col text-center">
-						<img src="images/cover-photo.jpg" class="rounded-circle shadow-border" width="500" height="500" alt="Cover Photo">
+			<div id="page-content" class="fade-in home-page">
+				<br><h1>Welcome to Noah's Portfolio!</h1><br>
+				<div class="row text-center">
+					<div class="col-12 col-md-1"></div>
+					<div class="col-8 col-md-4 mx-auto">
+						<img src="images/cover-photo.jpg" class="rounded-medium shadow-border" height="550" alt="Cover Photo"><br>
 					</div>
-					<div class="col">
-						<p class="fs-5">Welcome! My name is Noah Fourby, and I am currently an Open University student at San Jose State Unversity, and 
+					<div class="col-12 col-md-6">
+						<p class="fs-5 text-width-limit-left">Greetings! My name is Noah Fourby, and I am currently an Open University student at San Jose State Unversity, and 
 						hoping to join the Masters in Design, Specialty in Animation this Fall. I am originally from Dublin, CA, and have been living in San Jose for the 
 						past few years for school. This website is hand-coded in HTML, CSS, & Bootstrap to act as my personal online portfolio and respository to 
 						showcase my various artwork. As you navigate this site you will learn about different art projects I have made for my ART-74 class.</p>
 					</div>
+					<div class="col-12 col-md-1"></div>
 				</div>
 			</div>
 		</div>

@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>French Horn</title>
+		<title>A Spark</title>
 		<link rel="icon" type="image/png" href="../images/kirbo.png">
 		<link rel="stylesheet" href="../styling.css">
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+		<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 		<!-- For Formatting Scrollbar -->
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@6.2.3/dist/simplebar.min.css" />
 		<script src="https://cdn.jsdelivr.net/npm/simplebar@6.2.3/dist/simplebar.min.js"></script>
 	</head>
-
+	
 	<body>
 		<div class="container-fluid text-center" data-simplebar>
-
+		
 			<!-- Header -->
 			<nav class="navbar navbar-expand-lg gradient-navbar">
 			
@@ -34,12 +35,12 @@
 				<!-- NavBar Items -->
 				<div class="collapse navbar-collapse" id="navbarMenu">
 					<ul class="navbar-nav ms-auto blue-text pink-text bolder-font">
-						<li><a class="nav-link active-page" href="../index.html">Home</a></li>
+						<li><a class="nav-link" href="../index.html">Home</a></li>
 						<li><a class="nav-link" href="../glitch-art.html">Glitch</a></li>
 						<li><a class="nav-link" href="../meme-mashup.html">Meme Mashup</a></li>
 						<li><a class="nav-link" href="../minecraft-art.html">Minecraft Art</a></li>
 						<li><a class="nav-link" href="../3d-printing.html">3D Printing</a></li>
-						<li><a class="nav-link active-page" href="net-art.html">Net Art</a></li>
+						<li><a class="nav-link" href="../net-art/net-art.html">Net Art</a></li>
 						<li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle no-arrow" href="#" id="jsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Javascript</a>
 							<ul class="dropdown-menu" aria-labelledby="jsDropdown">
@@ -50,31 +51,28 @@
 								<li><a class="dropdown-item" href="../javascript/interactive_game.html">Interactive Game</a></li>
 							</ul>
 						</li>
-						<li><a class="nav-link pe-md-3" href="../interwoven/interwoven_home.html">Interwoven</a></li>
+						<li><a class="nav-link pe-md-3 active-page" href="interwoven_home.html">Interwoven</a></li>
 					</ul>
 				</div>
 			</nav>
-
+			
 			<!-- Body -->
-			<div id="page-content" class="fade-in">
-				<br><h2>You chose the French Horn!</h2>
-				<div class="w-100 w-md-80 mx-auto">
-					<p class="fs-5 text-width-limit">Known for it's rich and regal sound, the horn often is the backbone of many ochrestral arrangements.</p><br>
+			<div id="page-content" class="d-flex flex-column justify-content-center align-items-center" style="min-height: calc(100vh - 90px);">
+				<div class="story-text">
+					<h2 class="story-line story-hidden">It starts with a spark...</h2>
+					<h2 class="story-line story-hidden">Whether it be through digital, or crafts with their hands, everyone's got a spark.</h2>
+					<h2 class="story-line story-hidden">For me, that spark was through music.</h2>
+					<a href="2_intro_to_music.html" id="continue-link" class="story-hidden">
+						<button type="button" class="btn btn-outline-warning btn-lg rounded-medium">Continue</button>
+					</a>
 				</div>
-				<div class="d-flex flex-wrap justify-content-center align-items-center gap-3">
-					<!-- Image -->
-					<img src="https://www.musicteachermagazine.co.uk/media/azajarhk/adobestock_38324294_cropped.jpeg?width=960&height=640&format=webp&quality=80&bgcolor=White&v=1db09c433b26190" class="rounded-small" width="711" height="400">
-					<!-- Video -->
-					<iframe class="rounded-small" width="711" height="400" src="https://www.youtube.com/embed/um-mVMdlH9g?si=oiLvTYBildovkLu3" 
-					title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-					referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-				</div><br>
-				<a href="choosing_an_instrument.html"><button type="button" class="btn btn-outline-primary btn-lg rounded-small">Choose a Different Instrument</button></a>
-				<a href="practice.html"><button type="button" class="btn btn-outline-primary btn-lg rounded-small">Continue</button></a>
 			</div>
+
 		</div>
+
 
 		<!-- Page Transition -->
 		<script src="../navigation.js"></script>
+		
 	</body>
 </html>
