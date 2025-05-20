@@ -1,0 +1,100 @@
+Wavefront OBJ material file
+# Contains 7 materials
+
+newmtl glowstone
+Ns 0
+Ka 0.2 0.2 0.2
+Kd 1 1 1
+Ks 0 0 0
+Ke 1 1 1
+map_Ka tex/glowstone.png
+# for G3D, to make textures look blocky:
+interpolateMode NEAREST_MAGNIFICATION_TRILINEAR_MIPMAP_MINIFICATION
+map_Kd tex/glowstone.png
+map_Ke tex/glowstone.png
+illum 2
+# d 1
+# Tr 0
+
+newmtl dark_oak_log
+Ns 0
+Ka 0.2 0.2 0.2
+Kd 1 1 1
+Ks 0 0 0
+map_Ka tex/dark_oak_log.png
+# for G3D, to make textures look blocky:
+interpolateMode NEAREST_MAGNIFICATION_TRILINEAR_MIPMAP_MINIFICATION
+map_Kd tex/dark_oak_log.png
+illum 2
+# d 1
+# Tr 0
+
+newmtl pink_stained_glass
+Ns 242.25
+Ka 0.2 0.2 0.2
+Kd 1 1 1
+Ks 0.03 0.03 0.03
+map_Ka tex/pink_stained_glass.png
+# for G3D, to make textures look blocky:
+interpolateMode NEAREST_MAGNIFICATION_TRILINEAR_MIPMAP_MINIFICATION
+map_Kd tex/pink_stained_glass.png
+map_d tex/pink_stained_glass.png
+illum 4
+# d 0.5
+# Tr 0.5
+Tf 0.5 0.5 0.5
+
+newmtl red_stained_glass
+Ns 242.25
+Ka 0.2 0.2 0.2
+Kd 1 1 1
+Ks 0.03 0.03 0.03
+map_Ka tex/red_stained_glass.png
+# for G3D, to make textures look blocky:
+interpolateMode NEAREST_MAGNIFICATION_TRILINEAR_MIPMAP_MINIFICATION
+map_Kd tex/red_stained_glass.png
+map_d tex/red_stained_glass.png
+illum 4
+# d 0.5
+# Tr 0.5
+Tf 0.5 0.5 0.5
+
+newmtl cherry_leaves
+Ns 0
+Ka 0.2 0.2 0.2
+Kd 1 1 1
+Ks 0 0 0
+map_Ka tex/cherry_leaves.png
+# for G3D, to make textures look blocky:
+interpolateMode NEAREST_MAGNIFICATION_TRILINEAR_MIPMAP_MINIFICATION
+map_Kd tex/cherry_leaves.png
+map_d tex/cherry_leaves.png
+illum 2
+# d 1
+# Tr 0
+
+newmtl stripped_cherry_log
+Ns 127.5
+Ka 0.2 0.2 0.2
+Kd 1 1 1
+Ks 0.15 0.15 0.15
+map_Ka tex/stripped_cherry_log.png
+# for G3D, to make textures look blocky:
+interpolateMode NEAREST_MAGNIFICATION_TRILINEAR_MIPMAP_MINIFICATION
+map_Kd tex/stripped_cherry_log.png
+illum 2
+# d 1
+# Tr 0
+
+newmtl stripped_cherry_log_top
+Ns 127.5
+Ka 0.2 0.2 0.2
+Kd 1 1 1
+Ks 0.15 0.15 0.15
+map_Ka tex/stripped_cherry_log_top.png
+# for G3D, to make textures look blocky:
+interpolateMode NEAREST_MAGNIFICATION_TRILINEAR_MIPMAP_MINIFICATION
+map_Kd tex/stripped_cherry_log_top.png
+illum 2
+# d 1
+# Tr 0
