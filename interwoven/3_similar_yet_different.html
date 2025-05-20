@@ -56,30 +56,36 @@
 			</nav>
 			
 			<!-- Body -->
-			<div id="page-content" class="fade-in">
-				<h1>Similar Yet Different</h1>
-				<h3>Much like choosing an instrument, the same type of art can lead down different routes.</h3>
-				<div class="row">
+			<div id="page-content" class="d-flex flex-column justify-content-center align-items-center" style="min-height: calc(100vh - 90px);">
+				<div class="story-text">
+					<h2 class="story-line story-hidden">Now lets move to the concept of similarities and differences...</h2>
+					<h2 class="story-line story-hidden">When observing musical instruments, you will notice how each instrument sounds a little different.</h2>
+					<h2 class="story-line story-hidden">They all can play the same notes &amp rhythms, but each with their own unique style.</h2>
+					<h2 class="story-line story-hidden">When thinking about other art forms, like paint brushes for example, those variations start to be noticeable...</h2>
+					<h2 class="story-line story-hidden">For even among the same type of art, the possibilities truly are endless.</h2>
+				</div>
+				<div class="row story-line story-hidden">
 					<div class="col">
-						<a href=""><button type="button" class="btn btn-outline-warning btn-lg rounded-medium">French Horn</button></a>
+						<button class="btn btn-outline-warning btn-lg rounded-medium m-2" data-sound="sounds/french_horn_concert_f.m4a">French Horn</button>
 					</div>
 					<div class="col">
-						<button type="button" class="btn btn-outline-warning btn-lg rounded-medium" onClick="playSound('trumpet')">Trumpet</button>
-						<audio id="trumpet" src="sounds/trumpet_concert_f.mp3"></audio>
+						<button class="btn btn-outline-warning btn-lg rounded-medium m-2" data-sound="sounds/trumpet_concert_f.mp3">Trumpet</button>
 					</div>
 					<div class="col">
-						<a href=""><button type="button" class="btn btn-outline-warning btn-lg rounded-medium">Piano</button></a>
+						<button class="btn btn-outline-warning btn-lg rounded-medium m-2" data-sound="sounds/piano_concert_f.m4a">Piano</button><br>
 					</div>
-				<p class="text-width-limit">*Notes in the key of F.</p><br>
-				<a href="4_digital_and_physical.html"><button type="button" class="btn btn-outline-warning btn-lg rounded-medium">Continue</button></a>
+				<p class="text-width-limit">*Notes in the key of F.</p><br><br>
+				<a href="4_paths.html" id="continue-link" class="story-hidden"><button type="button" class="btn btn-outline-warning btn-lg rounded-medium">Continue</button></a>
 			</div>
 		</div>
 
+
+		<audio id="audioPlayer" preload="auto"></audio>
 		<!-- Sound on Press Function -->
-		<script src="navigation.js"></script>
+		<script src="play_sound.js"></script>
 
 		<!-- Page Transition -->
-		<script src="navigation.js"></script>
+		<script src="../navigation.js"></script>
 		
 	</body>
 </html>

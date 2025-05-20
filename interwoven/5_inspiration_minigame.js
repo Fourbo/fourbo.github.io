@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
     startButton.addEventListener("click", startGame);
 
     revealButton.addEventListener("click", () => {
-        window.location.href = "7_showcase.html";
+        window.location.href = "6_showcase.html";
     });
 
 });

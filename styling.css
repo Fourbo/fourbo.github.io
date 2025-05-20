@@ -209,8 +209,8 @@ html, body {
 
 /* Override size only when 'small-model' is used */
 .model-container.small-model .model-viewer-square {
-  max-width: 60vmin;
-  height: 60vmin;
+  max-width: 80vmin;
+  height: 80vmin;
 }
 
 /* Image Hover Shrink Animation*/
