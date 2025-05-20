@@ -15,6 +15,7 @@
 	</head>
 	
 	<body>
+	
 		<div class="container-fluid text-center" data-simplebar>
 		
 			<!-- Header -->
@@ -42,10 +43,9 @@
 						<li><a class="nav-link" href="../3d-printing.html">3D Printing</a></li>
 						<li><a class="nav-link" href="../net-art/net-art.html">Net Art</a></li>
 						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle no-arrow" href="#" id="jsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Javascript</a>
+							<a class="nav-link dropdown-toggle no-arrow" href="#" id="jsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">JavaScript</a>
 							<ul class="dropdown-menu" aria-labelledby="jsDropdown">
 								<li><a class="dropdown-item fw-bold" href="../javascript/javascript.html">All Projects</a></li>
-								<li><hr class="dropdown-divider"></li>
 								<li><a class="dropdown-item" href="../javascript/self_portrait.html">Self Portrait</a></li>
 								<li><a class="dropdown-item" href="../javascript/diy_photoshop.html">DIY Photoshop</a></li>
 								<li><a class="dropdown-item" href="../javascript/interactive_game.html">Interactive Game</a></li>
@@ -69,9 +69,19 @@
 				creativity I have gone down, ultimate blending together to create one final piece with a more profound meaning 
 				and showcase.</p><br>
 				
-				<p class="fs-5 text-width-limit"><strong>Use the mouse to click through text and interact.</strong></p><br>
+				<p class="text-width-limit"><strong>Use the mouse to click through text and interact.</strong></p><br>
+				<div class="model-container small-model">
+				<model-viewer id="modelViewer" src="gudetama.glb"
+					alt="3D model"
+					auto-rotate
+					camera-controls
+					ar
+					class = "model-viewer-square-small"
+					style="display: block;">
+				</model-viewer>
 				<a href="1_spark.html"><button type="button" class="btn btn-outline-warning btn-lg rounded-medium">Dive In</button></a>
 			</div>
+		</div>
 		</div>
 
 
