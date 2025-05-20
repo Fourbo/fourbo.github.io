@@ -80,7 +80,26 @@
 		
 
 		</div>
+<script>
+  const model = document.getElementById('modelViewer');
+  const audio = document.getElementById('modelAudio');
+  let audioPlayed = false;
 
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !audioPlayed) {
+        audio.play().catch(err => {
+          console.log("Autoplay blocked. Will play after interaction.");
+        });
+        audioPlayed = true;
+      }
+    });
+  }, {
+    threshold: 0.5
+  });
+
+  observer.observe(model);
+</script>
 		<script src="../fullscreen_toggle.js"></script>
 		<!-- Page Transition -->
 		<script src="../navigation.js"></script>
